@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SOSNet - First Aid Essentials</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#7bd1f8",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#ffdad6",
+                    "on-tertiary-fixed": "#001f2a",
+                    "inverse-surface": "#303030",
+                    "secondary-fixed": "#d4e3ff",
+                    "tertiary": "#005f7b",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "on-tertiary-fixed-variant": "#004d65",
+                    "inverse-primary": "#ffb3ac",
+                    "surface-variant": "#e5e2e1",
+                    "primary-fixed-dim": "#ffb3ac",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1b1c1c",
+                    "secondary-container": "#54a0fe",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#5b403d",
+                    "surface-bright": "#fcf9f8",
+                    "on-tertiary-container": "#e9f7ff",
+                    "primary": "#af101a",
+                    "on-secondary-container": "#003567",
+                    "secondary": "#005faf",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-container-low": "#f6f3f2",
+                    "on-primary-container": "#fff2f0",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#ba1a20",
+                    "on-secondary-fixed": "#001c3a",
+                    "tertiary-fixed": "#bee9ff",
+                    "on-secondary-fixed-variant": "#004786",
+                    "surface-container": "#f0eded",
+                    "primary-container": "#d32f2f",
+                    "outline-variant": "#e4beba",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1c1c",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary-fixed": "#410003",
+                    "surface": "#fcf9f8",
+                    "tertiary-container": "#00799c",
+                    "outline": "#8f6f6c",
+                    "background": "#fcf9f8",
+                    "on-primary-fixed-variant": "#930010",
+                    "inverse-on-surface": "#f3f0ef",
+                    "secondary-fixed-dim": "#a5c8ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-number {
+            -webkit-text-stroke: 1px rgba(175, 16, 26, 0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-[#fcf9f8] dark:bg-slate-950 docked full-width top-0 z-50 sticky">
+<div class="flex justify-between items-center w-full px-6 pt-8 pb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#af101a] dark:text-[#ffdad6] text-3xl" data-icon="emergency">emergency</span>
+<h1 class="font-['Inter'] leading-tight tracking-tighter font-bold text-[#1b1c1c] dark:text-[#fcf9f8] text-2xl uppercase tracking-widest">SOSNet</h1>
+</div>
+<div class="flex items-center gap-2 px-4 py-1.5 bg-error-container rounded-full">
+<div class="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+<span class="font-label text-xs font-black text-on-error-container tracking-widest uppercase">ONLINE</span>
+</div>
+</div>
+</header>
+<main class="px-6 py-6 max-w-5xl mx-auto">
+<!-- Hero Section / Search -->
+<section class="mb-10">
+<h2 class="text-4xl md:text-5xl font-black tracking-tighter text-on-surface mb-2 leading-none">Emergency First Aid</h2>
+<p class="text-on-surface-variant font-medium text-lg max-w-md">Immediate, clear instructions for life-critical situations.</p>
+</section>
+<!-- Bento Grid for First Aid Topics -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- CPR Card (Primary Action) -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between min-h-[280px] shadow-sm hover:shadow-xl transition-all duration-300 border-l-8 border-primary">
+<div>
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="ecg_heart" style="font-variation-settings: 'FILL' 1;">ecg_heart</span>
+</div>
+<h3 class="text-2xl font-black tracking-tight mb-2">CPR</h3>
+<p class="text-on-surface-variant font-semibold text-sm uppercase tracking-widest">Cardiac Arrest</p>
+</div>
+<div class="mt-8 space-y-4">
+<div class="flex gap-4 items-start">
+<span class="text-primary font-black text-xl leading-none">1.</span>
+<p class="font-bold text-on-surface">Check responsiveness &amp; breathing.</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-primary font-black text-xl leading-none">2.</span>
+<p class="font-bold text-on-surface">Call Emergency Services (911).</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-primary font-black text-xl leading-none">3.</span>
+<p class="font-bold text-on-surface">Push hard and fast in center of chest.</p>
+</div>
+</div>
+</div>
+<!-- Bleeding Control Card -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between min-h-[280px] shadow-sm hover:shadow-xl transition-all duration-300 border-l-8 border-primary">
+<div>
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="blood_pressure" style="font-variation-settings: 'FILL' 1;">blood_pressure</span>
+</div>
+<h3 class="text-2xl font-black tracking-tight mb-2">Bleeding</h3>
+<p class="text-on-surface-variant font-semibold text-sm uppercase tracking-widest">Wound Control</p>
+</div>
+<div class="mt-8 space-y-4">
+<div class="flex gap-4 items-start">
+<span class="text-primary font-black text-xl leading-none">1.</span>
+<p class="font-bold text-on-surface">Stay Calm &amp; Wear Gloves.</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-primary font-black text-xl leading-none">2.</span>
+<p class="font-bold text-on-surface">Apply direct pressure to wound.</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-primary font-black text-xl leading-none">3.</span>
+<p class="font-bold text-on-surface">Keep limb elevated above heart.</p>
+</div>
+</div>
+</div>
+<!-- Burns Card -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between min-h-[280px] shadow-sm hover:shadow-xl transition-all duration-300 border-l-8 border-secondary">
+<div>
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-6 shadow-lg shadow-secondary/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="local_fire_department" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<h3 class="text-2xl font-black tracking-tight mb-2">Burns</h3>
+<p class="text-on-surface-variant font-semibold text-sm uppercase tracking-widest">Heat Exposure</p>
+</div>
+<div class="mt-8 space-y-4">
+<div class="flex gap-4 items-start">
+<span class="text-secondary font-black text-xl leading-none">1.</span>
+<p class="font-bold text-on-surface">Cool with running water for 20 mins.</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-secondary font-black text-xl leading-none">2.</span>
+<p class="font-bold text-on-surface">Remove jewelry/clothing (if not stuck).</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-secondary font-black text-xl leading-none">3.</span>
+<p class="font-bold text-on-surface">Cover loosely with plastic wrap.</p>
+</div>
+</div>
+</div>
+<!-- Fracture Card -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between min-h-[280px] shadow-sm hover:shadow-xl transition-all duration-300 border-l-8 border-secondary">
+<div>
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-6 shadow-lg shadow-secondary/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="home_health" style="font-variation-settings: 'FILL' 1;">home_health</span>
+</div>
+<h3 class="text-2xl font-black tracking-tight mb-2">Fracture</h3>
+<p class="text-on-surface-variant font-semibold text-sm uppercase tracking-widest">Bone Injury</p>
+</div>
+<div class="mt-8 space-y-4">
+<div class="flex gap-4 items-start">
+<span class="text-secondary font-black text-xl leading-none">1.</span>
+<p class="font-bold text-on-surface">Do not attempt to realign bone.</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-secondary font-black text-xl leading-none">2.</span>
+<p class="font-bold text-on-surface">Immobilize with a splint/sling.</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-secondary font-black text-xl leading-none">3.</span>
+<p class="font-bold text-on-surface">Apply ice to reduce swelling.</p>
+</div>
+</div>
+</div>
+<!-- Snake Bite Card -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between min-h-[280px] shadow-sm hover:shadow-xl transition-all duration-300 border-l-8 border-tertiary">
+<div>
+<div class="w-16 h-16 rounded-full bg-tertiary-container flex items-center justify-center mb-6 shadow-lg shadow-tertiary/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="pest_control" style="font-variation-settings: 'FILL' 1;">pest_control</span>
+</div>
+<h3 class="text-2xl font-black tracking-tight mb-2">Snake Bite</h3>
+<p class="text-on-surface-variant font-semibold text-sm uppercase tracking-widest">Venom Control</p>
+</div>
+<div class="mt-8 space-y-4">
+<div class="flex gap-4 items-start">
+<span class="text-tertiary font-black text-xl leading-none">1.</span>
+<p class="font-bold text-on-surface">Keep victim calm &amp; immobile.</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-tertiary font-black text-xl leading-none">2.</span>
+<p class="font-bold text-on-surface">Position bite below heart level.</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-tertiary font-black text-xl leading-none">3.</span>
+<p class="font-bold text-on-surface">Do not cut or suck the wound.</p>
+</div>
+</div>
+</div>
+<!-- Heat Stroke Card -->
+<div class="group bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between min-h-[280px] shadow-sm hover:shadow-xl transition-all duration-300 border-l-8 border-tertiary">
+<div>
+<div class="w-16 h-16 rounded-full bg-tertiary-container flex items-center justify-center mb-6 shadow-lg shadow-tertiary/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="wb_sunny" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+</div>
+<h3 class="text-2xl font-black tracking-tight mb-2">Heat Stroke</h3>
+<p class="text-on-surface-variant font-semibold text-sm uppercase tracking-widest">Overheating</p>
+</div>
+<div class="mt-8 space-y-4">
+<div class="flex gap-4 items-start">
+<span class="text-tertiary font-black text-xl leading-none">1.</span>
+<p class="font-bold text-on-surface">Move person to a cool area.</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-tertiary font-black text-xl leading-none">2.</span>
+<p class="font-bold text-on-surface">Cool with wet cloths or misting.</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-tertiary font-black text-xl leading-none">3.</span>
+<p class="font-bold text-on-surface">Fanning for evaporative cooling.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Warning Disclaimer Section -->
+<section class="mt-12 bg-surface-container-high rounded-xl p-6 flex items-center gap-6">
+<div class="bg-error-container text-on-error-container p-4 rounded-full flex-shrink-0">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+</div>
+<div>
+<p class="text-on-surface-variant text-sm font-bold leading-relaxed uppercase tracking-tight">
+                    Information provided is for educational purposes. <br class="hidden md:block"/>
+                    In life-threatening situations, always dial emergency services immediately.
+                </p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-3 bg-[#fcf9f8]/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_-4px_24px_rgba(27,28,28,0.04)] shadow-2xl rounded-t-[1.5rem]">
+<a class="flex flex-col items-center justify-center text-[#1b1c1c] dark:text-slate-400 py-2 px-4 hover:bg-[#f6f3f2] dark:hover:bg-slate-800 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1b1c1c] dark:text-slate-400 py-2 px-4 hover:bg-[#f6f3f2] dark:hover:bg-slate-800 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="emergency_share">emergency_share</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Help</span>
+</a>
+<!-- Active State: First Aid -->
+<a class="flex flex-col items-center justify-center bg-[#af101a] text-white rounded-2xl py-2 px-4 shadow-lg shadow-[#af101a]/20 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="medical_services" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">First Aid</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1b1c1c] dark:text-slate-400 py-2 px-4 hover:bg-[#f6f3f2] dark:hover:bg-slate-800 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="contact_phone">contact_phone</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Contacts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1b1c1c] dark:text-slate-400 py-2 px-4 hover:bg-[#f6f3f2] dark:hover:bg-slate-800 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

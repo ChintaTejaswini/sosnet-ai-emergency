@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#7bd1f8",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#ffdad6",
+                    "on-tertiary-fixed": "#001f2a",
+                    "inverse-surface": "#303030",
+                    "secondary-fixed": "#d4e3ff",
+                    "tertiary": "#005f7b",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "on-tertiary-fixed-variant": "#004d65",
+                    "inverse-primary": "#ffb3ac",
+                    "surface-variant": "#e5e2e1",
+                    "primary-fixed-dim": "#ffb3ac",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1b1c1c",
+                    "secondary-container": "#54a0fe",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#5b403d",
+                    "surface-bright": "#fcf9f8",
+                    "on-tertiary-container": "#e9f7ff",
+                    "primary": "#af101a",
+                    "on-secondary-container": "#003567",
+                    "secondary": "#005faf",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-container-low": "#f6f3f2",
+                    "on-primary-container": "#fff2f0",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#ba1a20",
+                    "on-secondary-fixed": "#001c3a",
+                    "tertiary-fixed": "#bee9ff",
+                    "on-secondary-fixed-variant": "#004786",
+                    "surface-container": "#f0eded",
+                    "primary-container": "#d32f2f",
+                    "outline-variant": "#e4beba",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1c1c",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary-fixed": "#410003",
+                    "surface": "#fcf9f8",
+                    "tertiary-container": "#00799c",
+                    "outline": "#8f6f6c",
+                    "background": "#fcf9f8",
+                    "on-primary-fixed-variant": "#930010",
+                    "inverse-on-surface": "#f3f0ef",
+                    "secondary-fixed-dim": "#a5c8ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .voice-wave-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            height: 40px;
+        }
+        .voice-bar {
+            width: 4px;
+            background: #af101a;
+            border-radius: 2px;
+            animation: wave 1s infinite ease-in-out;
+        }
+        @keyframes wave {
+            0%, 100% { transform: scaleY(0.5); }
+            50% { transform: scaleY(1.5); }
+        }
+        .voice-bar:nth-child(1) { animation-delay: 0.1s; }
+        .voice-bar:nth-child(2) { animation-delay: 0.2s; }
+        .voice-bar:nth-child(3) { animation-delay: 0.3s; }
+        .voice-bar:nth-child(4) { animation-delay: 0.4s; }
+        .voice-bar:nth-child(5) { animation-delay: 0.5s; }
+        .voice-bar:nth-child(6) { animation-delay: 0.6s; }
+        .voice-bar:nth-child(7) { animation-delay: 0.7s; }
+        .voice-bar:nth-child(8) { animation-delay: 0.8s; }
+
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-[#1b1c1c] text-white font-body min-h-screen flex flex-col">
+<!-- Top Navigation Anchor -->
+<header class="bg-[#1b1c1c] text-[#ffdad6] font-['Inter'] leading-tight tracking-tighter font-bold docked full-width top-0 flex justify-between items-center w-full px-6 pt-8 pb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="emergency">emergency</span>
+<span class="text-2xl font-black text-[#fcf9f8] uppercase tracking-widest">SOSNet</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-[#54a0fe] animate-pulse"></div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-[#fcf9f8]">ONLINE</span>
+</div>
+</header>
+<main class="flex-1 flex flex-col px-6 pt-4 pb-32 max-w-2xl mx-auto w-full">
+<!-- Status Indicator -->
+<div class="flex justify-center mb-4">
+<div class="bg-error-container/10 border border-error/20 px-6 py-2 rounded-full">
+<span class="text-error font-bold text-sm tracking-wider uppercase">Voice Activation Active</span>
+</div>
+</div>
+<!-- Central Mic Button & Animation -->
+<section class="flex-1 flex flex-col items-center justify-center relative py-16">
+<!-- Ripple Effects -->
+<div class="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
+<div class="w-64 h-64 rounded-full border-2 border-primary/40 animate-ping duration-[3000ms]"></div>
+<div class="absolute w-80 h-80 rounded-full border border-primary/20 scale-150"></div>
+</div>
+<button class="relative z-10 w-52 h-52 rounded-full bg-gradient-to-br from-primary to-primary-container flex items-center justify-center shadow-[0_0_80px_rgba(175,16,26,0.5)] active:scale-95 transition-all group">
+<span class="material-symbols-outlined text-7xl text-white" data-icon="mic" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+<div class="mt-16 voice-wave-container">
+<div class="voice-bar h-6"></div>
+<div class="voice-bar h-10"></div>
+<div class="voice-bar h-16"></div>
+<div class="voice-bar h-12"></div>
+<div class="voice-bar h-18"></div>
+<div class="voice-bar h-14"></div>
+<div class="voice-bar h-8"></div>
+<div class="voice-bar h-12"></div>
+</div>
+<p class="mt-6 text-white text-lg font-bold tracking-wide">Speak now to report an emergency</p>
+<div class="mt-2 flex items-center gap-2 px-4 py-1.5 bg-zinc-800/50 rounded-full border border-white/5">
+<span class="material-symbols-outlined text-[14px] text-primary animate-pulse" data-icon="auto_awesome">auto_awesome</span>
+<p class="text-[11px] text-zinc-400 font-bold uppercase tracking-widest">Auto-detecting voice language and emergency type</p>
+</div>
+</section>
+<!-- Transcription Box -->
+<section class="mt-auto">
+<div class="bg-zinc-900/80 backdrop-blur-xl border border-white/5 rounded-[2rem] p-8 shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="graphic_eq">graphic_eq</span>
+<span class="text-xs font-black uppercase tracking-[0.2em] text-primary">Live Transcription</span>
+</div>
+<div class="min-h-[80px]">
+<span class="block text-zinc-500 font-bold italic mb-2">Listening...</span>
+<p class="text-2xl font-bold text-white leading-tight">
+                        "Accident near village square"
+                    </p>
+</div>
+</div>
+</section>
+<!-- Secondary Actions -->
+<div class="grid grid-cols-2 gap-4 mt-8">
+<button class="bg-zinc-800/50 hover:bg-zinc-800 text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 transition-all border border-white/5">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+                MANUAL CALL
+            </button>
+<button class="bg-zinc-800/50 hover:bg-zinc-800 text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 transition-all border border-white/5">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+                CANCEL
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Shell (Filtered: Active on Help) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-3 bg-[#1b1c1c]/80 backdrop-blur-xl shadow-2xl rounded-t-[1.5rem]">
+<div class="flex flex-col items-center justify-center text-[#fcf9f8] py-2 px-4 hover:bg-[#f6f3f2] dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#af101a] text-white rounded-2xl py-2 px-4 shadow-lg shadow-[#af101a]/20 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="emergency_share" style="font-variation-settings: 'FILL' 1;">emergency_share</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest">Help</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#fcf9f8] py-2 px-4 hover:bg-[#f6f3f2] dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="medical_services">medical_services</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest">First Aid</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#fcf9f8] py-2 px-4 hover:bg-[#f6f3f2] dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="contact_phone">contact_phone</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest">Contacts</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#fcf9f8] py-2 px-4 hover:bg-[#f6f3f2] dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</div>
+</nav>
+</body></html>
