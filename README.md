@@ -6,6 +6,16 @@ Built for **real-time emergency situations**, SOSNet focuses on **speed, accessi
 
 ---
 
+❗ Problem Statement
+
+In real emergency situations, victims often cannot unlock their phone, type messages, explain their location, or manually call for help due to panic, injury, weak network, or time pressure.
+
+Traditional SOS apps depend too much on manual interaction, which can fail in critical moments.
+
+SOSNet solves this by enabling hands-free voice-triggered emergency alerts with instant location and health context, making rescue response faster and smarter.
+
+----
+ 
 # ✨ Features
 
 * 🎤 **Voice Activated SOS**
