@@ -15,6 +15,9 @@ Traditional SOS apps depend too much on manual interaction, which can fail in cr
 SOSNet solves this by enabling hands-free voice-triggered emergency alerts with instant location and health context, making rescue response faster and smarter.
 
 ----
+Live Preview : 
+https://share.google/vh2lLlpF5suLyovvz
+------
  
 # ✨ Features
 
@@ -92,6 +95,15 @@ SOSNet solves this by allowing **instant voice-based emergency detection and aut
 # 👥 Team
 
 Built with ❤️ by Team SOSNet.
+Chinta Tejaswini
+Ramya 
+Meghamala
+Siddhi
+
+---
+
+Note :
+This is incomplete, we will soon make it accessible with all features.
 
 
 ---
