@@ -95,9 +95,9 @@ SOSNet solves this by allowing **instant voice-based emergency detection and aut
 # 👥 Team
 
 Built with ❤️ by Team SOSNet.
-Chinta Tejaswini
-Ramya 
-Meghamala
+Chinta Tejaswini, 
+Ramya,  
+Meghamala, 
 Siddhi
 
 ---
