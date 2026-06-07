@@ -16,7 +16,7 @@ SOSNet solves this by enabling hands-free voice-triggered emergency alerts with 
 
 ----
 Live Preview : 
-https://share.google/vh2lLlpF5suLyovvz
+[https://share.google/vh2lLlpF5suLyovvz](https://agent-6a254e20ef97b434ff304f2b--sosnet-v1.netlify.app)
 ------
  
 # ✨ Features
